@@ -5,21 +5,11 @@ return {
       local cmp = require("cmp")
 
       opts.mapping = vim.tbl_extend("force", opts.mapping or {}, {
-        ["<Tab>"] = cmp.mapping(function(fallback)
-          if cmp.visible() then
-            cmp.select_next_item()
-          else
-            fallback()
-          end
-        end, { "i", "s" }),
-        ["<S-Tab>"] = cmp.mapping(function(fallback)
-          if cmp.visible() then
-            cmp.select_prev_item()
-          else
-            fallback()
-          end
-        end, { "i", "s" }),
+        ["<Up>"] = cmp.mapping.select_prev_item(), -- Navigate to the previous item using Up arrow
+        ["<Down>"] = cmp.mapping.select_next_item(), -- Navigate to the next item using Down arrow
         ["<CR>"] = cmp.mapping.confirm({ select = true }), -- Confirm selection with Enter
+        ["<Tab>"] = cmp.mapping.confirm({ select = true }), -- Confirm selection with Tab
+        ["<S-Tab>"] = cmp.mapping.abort(), -- Abort completion with Shift-Tab
       })
 
       opts.window = {
