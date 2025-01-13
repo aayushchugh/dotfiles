@@ -5,7 +5,7 @@ if wezterm.config_builder then
 	config = wezterm.config_builder()
 end
 
-config.font = wezterm.font("Iosevka Nerd Font", { weight = "DemiBold" })
+config.font = wezterm.font("Fira Code")
 
 config.font_size = 15
 config.line_height = 1.3
@@ -15,7 +15,7 @@ config.colors = theme.colors()
 config.macos_window_background_blur = 20
 config.window_background_opacity = 0.9
 
-config.enable_tab_bar = false
+config.enable_tab_bar = true
 config.enable_wayland = false
 
 config.window_decorations = "RESIZE"
