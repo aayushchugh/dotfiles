@@ -4,3 +4,8 @@ theme = Oxocarbon
 shell-integration = zsh
 background-opacity = 0.9
 background-blur-radius = 20
+
+window-padding-x = 4
+window-padding-y = 4
+window-padding-balance = true
+macos-titlebar-style = hidden

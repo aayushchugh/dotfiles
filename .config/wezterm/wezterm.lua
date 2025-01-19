@@ -10,9 +10,9 @@ config.font = wezterm.font("Fira Code")
 config.font_size = 15
 config.line_height = 1.3
 
-local theme = require("themes/rose-pine/main")
+local theme = require("themes/oxocarbon/main")
 config.colors = theme.colors()
-config.macos_window_background_blur = 20
+config.macos_window_background_blur = 25
 config.window_background_opacity = 0.9
 
 config.enable_tab_bar = false
@@ -25,5 +25,7 @@ config.window_padding = {
 	top = 6,
 	bottom = 0,
 }
+
+config.max_fps = 120
 
 return config
